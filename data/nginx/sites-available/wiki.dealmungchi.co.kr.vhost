@@ -17,6 +17,15 @@ server {
     server_name wiki.dealmungchi.co.kr;
     server_tokens off;
 
+ 	
+
+    ##
+    # Nginx Bad Bot Blocker Includes
+    # REPO: https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker
+    ##
+	include /etc/nginx/bots.d/ddos.conf; 
+ 	include /etc/nginx/bots.d/blockbots.conf;
+ 
     ssl_certificate /etc/letsencrypt/live/wiki.dealmungchi.co.kr/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/wiki.dealmungchi.co.kr/privkey.pem;
     include /etc/letsencrypt/options-ssl-nginx.conf;
