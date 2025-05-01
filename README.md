@@ -7,7 +7,7 @@
 
 ## 주요 기능
 
-- **SSL 인증서 자동화**: `init-letsencrypt.sh` 스크립트로 ssl 인증서를 자동으로 발급하고 갱신합니다.
+- **SSL 인증서 자동화**: `init-letsencrypt.sh` 스크립트로 ssl 인증서를 자동으로 발급합니다.
 - **Bad Bot Block**: `nginx-badbot-blocker`와 `nginx-ultimate-bad-bot-blocker`로 악성봇을 차단 합니다.
 
 ## 설치 및 설정
