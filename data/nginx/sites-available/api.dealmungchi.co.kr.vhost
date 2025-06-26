@@ -36,7 +36,7 @@ server {
     include /etc/letsencrypt/options-ssl-nginx.conf;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
-    location / {
+    location /api/hotdeals {
         proxy_pass  http://api;
         proxy_set_header    Host                $http_host;
         proxy_set_header    X-Real-IP           $remote_addr;
@@ -44,5 +44,11 @@ server {
 
 	proxy_http_version 1.1;
 	proxy_set_header Connection "";
+    }
+
+    location = /api/notices.json {
+	 alias /var/www/certbot/notices.json;
+   	 default_type application/json;
+   	 access_log off;
     }
 }
